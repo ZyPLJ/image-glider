@@ -39,7 +39,7 @@
                 <el-input-number
                   v-model="preciseSettings.x"
                   :min="0"
-                  :max="imageWidth - 1"
+                  :max="Math.max(0, imageWidth - 1)"
                   size="small"
                   class="w-full"
                 />
@@ -51,7 +51,7 @@
                 <el-input-number
                   v-model="preciseSettings.y"
                   :min="0"
-                  :max="imageHeight - 1"
+                  :max="Math.max(0, imageHeight - 1)"
                   size="small"
                   class="w-full"
                 />
@@ -62,8 +62,8 @@
                 </label>
                 <el-input-number
                   v-model="preciseSettings.width"
-                  :min="1"
-                  :max="imageWidth"
+                  :min="0"
+                  :max="Math.max(0, imageWidth - 1)"
                   size="small"
                   class="w-full"
                 />
@@ -74,8 +74,8 @@
                 </label>
                 <el-input-number
                   v-model="preciseSettings.height"
-                  :min="1"
-                  :max="imageHeight"
+                  :min="0"
+                  :max="Math.max(0, imageHeight - 1)"
                   size="small"
                   class="w-full"
                 />
@@ -92,8 +92,8 @@
                 </label>
                 <el-input-number
                   v-model="centerSettings.width"
-                  :min="1"
-                  :max="imageWidth"
+                  :min="0"
+                  :max="Math.max(0, imageWidth - 1)"
                   size="small"
                   class="w-full"
                 />
@@ -104,8 +104,8 @@
                 </label>
                 <el-input-number
                   v-model="centerSettings.height"
-                  :min="1"
-                  :max="imageHeight"
+                  :min="0"
+                  :max="Math.max(0, imageHeight - 1)"
                   size="small"
                   class="w-full"
                 />

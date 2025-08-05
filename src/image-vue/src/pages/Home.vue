@@ -116,7 +116,7 @@ const features = [
   {
     name: '图片压缩',
     path: '/compress',
-    icon: 'Compress',
+    icon: 'Files',
     description: '优化图片文件大小，支持多种压缩级别'
   },
   {

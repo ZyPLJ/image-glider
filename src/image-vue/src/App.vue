@@ -7,7 +7,7 @@ const mobileMenuOpen = ref(false)
 const navigation = [
   { name: '首页', href: '/', icon: 'House' },
   { name: '颜色调整', href: '/color', icon: 'Brush' },
-  { name: '图片压缩', href: '/compress', icon: 'Compress' },
+  { name: '图片压缩', href: '/compress', icon: 'Files' },
   { name: '格式转换', href: '/convert', icon: 'RefreshRight' },
   { name: '图片裁剪', href: '/crop', icon: 'Crop' },
   { name: '尺寸调整', href: '/resize', icon: 'FullScreen' },
@@ -64,7 +64,7 @@ onMounted(() => {
               class="text-gray-500 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
               :class="{ 'text-blue-600 dark:text-blue-400': $route.path === item.href }"
             >
-              <component :is="item.icon" class="w-4 h-4 inline mr-2" />
+              <!-- <component :is="item.icon" class="w-4 h-4 inline mr-2" />-->
               {{ item.name }}
             </router-link>
           </nav>
